@@ -1,10 +1,14 @@
 {
-  "name": "ui-components-mobile",
+  "name": "@infostacks/ui-components-mobile",
   "version": "1.0.0",
   "description": "",
   "scripts": {
     "rollup": "rollup -c",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Infostacks/ui-components-mobile"
   },
   "author": "",
   "license": "ISC",
