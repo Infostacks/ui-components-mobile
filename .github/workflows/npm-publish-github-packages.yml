@@ -33,3 +33,5 @@ jobs:
       - run: npm ci
       - run: npm run rollup
       - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.PUBLISH_TOKEN}}
