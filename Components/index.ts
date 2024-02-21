@@ -1,4 +1,4 @@
-import MyButton from "./Button";
+import MyButton from "./package/Button";
 
 export {
     MyButton
