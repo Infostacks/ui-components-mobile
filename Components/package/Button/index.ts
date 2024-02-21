@@ -1,5 +1,2 @@
 import MyButton from "./Button";
-
-export {
-    MyButton
-}
+export default MyButton
