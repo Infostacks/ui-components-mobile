@@ -19,9 +19,8 @@ jobs:
         with:
           node-version: 20
           registry-url: https://npm.pkg.github.com/
-      - run: cd Components/
-      - run: npm ci
-      - run: npm run rollup
-      - run: npm publish
+      - run: cd Components/ && npm ci
+      - run: cd Components/ && npm run rollup
+      - run: cd Components/ && npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.PUBLISH_TOKEN}}
