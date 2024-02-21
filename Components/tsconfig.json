@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "noFallthroughCasesInSwitch": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "incremental": true,
+    "target": "ESNext",
+    "declaration": true,
+    "sourceMap": true,
+    "composite": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react-jsx", 
+    "module": "ESNext",  
+    "declarationDir": "types",
+    "outDir": "dist"
+  },
+  // "include": ["./src/**/*", "./src/**/*.json"],
+  "extends": ["@tsconfig/react-native/tsconfig.json","expo/tsconfig.base"]
+}
