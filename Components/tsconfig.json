@@ -21,5 +21,5 @@
     "outDir": "dist"
   },
   // "include": ["./src/**/*", "./src/**/*.json"],
-  "extends": ["@tsconfig/react-native/tsconfig.json","expo/tsconfig.base"]
+  "extends": ["@tsconfig/react-native/tsconfig.json"]
 }
