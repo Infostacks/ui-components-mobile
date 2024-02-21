@@ -29,6 +29,7 @@ export default [
         tsconfig: './tsconfig.json',
         declaration: true,
         declarationDir: 'dist',
+        exclude: ['**/*.test.ts', '**/*.stories.tsx'],
      }),
     ],
   },
