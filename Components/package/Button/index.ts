@@ -1,2 +1,2 @@
-import MyButton from "./Button";
-export default MyButton
+import CustomButton from './Button'
+export default CustomButton
