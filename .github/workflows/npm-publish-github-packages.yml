@@ -19,15 +19,12 @@ jobs:
         with:
           node-version: 20
           registry-url: https://npm.pkg.github.com/
-      - uses: webfactory/ssh-agent@v0.2.0
-        with:
-          ssh-private-key: ${{ secrets.private_ssh }}
 
       - name: Authenticate with private NPM package
-        run: cd Components/ && echo "//npm.pkg.github.com/:_authToken=${{ secrets.PUBLISH_TOKEN }}\n@infostacks:registry=https://npm.pkg.github.com" > .npmrc && npm ci
+        run: cd Components/ && echo "//npm.pkg.github.com/:_authToken=${{ secrets.PUBLISH_TOKEN }}\n@infostacks:registry=https://npm.pkg.github.com" > .npmrc 
         env:
           NODE_AUTH_TOKEN: ${{secrets.PUBLISH_TOKEN}}
-      # - run: cd Components/ && npm ci
+      - run: cd Components/ && npm ci
       - run: cd Components/ && npm run rollup
       - run: cd Components/ && npm publish
         env:
