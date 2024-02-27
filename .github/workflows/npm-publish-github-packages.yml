@@ -19,9 +19,10 @@ jobs:
         with:
           node-version: 20
           registry-url: https://npm.pkg.github.com/
+          scope: '@infostacks'
 
       - name: Authenticate with private NPM package
-        run: cd Components/ && echo "//npm.pkg.github.com/:_authToken=${{ secrets.PUBLISH_TOKEN }}\n@infostacks:registry=https://npm.pkg.github.com" > .npmrc 
+        run: cd Components/ && echo "//npm.pkg.github.com/:_authToken=${{ secrets.PUBLISH_TOKEN }}" > .npmrc 
         env:
           CI: true
           NODE_AUTH_TOKEN: ${{secrets.PUBLISH_TOKEN}}
