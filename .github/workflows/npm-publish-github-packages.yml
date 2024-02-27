@@ -23,7 +23,9 @@ jobs:
       - name: Authenticate with private NPM package
         run: cd Components/ && echo "//npm.pkg.github.com/:_authToken=${{ secrets.PUBLISH_TOKEN }}\n@infostacks:registry=https://npm.pkg.github.com" > .npmrc 
         env:
+          CI: true
           NODE_AUTH_TOKEN: ${{secrets.PUBLISH_TOKEN}}
+      - run: cd Components/ && cat .npmrc
       - run: cd Components/ && npm ci
       - run: cd Components/ && npm run rollup
       - run: cd Components/ && npm publish
