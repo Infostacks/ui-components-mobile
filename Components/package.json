@@ -42,8 +42,5 @@
   "files": [
     "dist"
   ],
-  "types": "dist/index.d.ts",
-  "dependencies": {
-    "@infostacks/validators": "^2.0.2"
-  }
+  "types": "dist/index.d.ts"
 }
