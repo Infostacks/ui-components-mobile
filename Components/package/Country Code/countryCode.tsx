@@ -9,7 +9,7 @@ import {
 } from 'react-native'
 import Style from './style'
 import { Actionsheet } from 'native-base'
-import { Icons } from '../..'
+import Icons from '../Icons'
 import RadioButton from '../Radio Button/radioButton'
 
 const CountryCode = ({

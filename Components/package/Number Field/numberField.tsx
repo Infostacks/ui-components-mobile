@@ -1,8 +1,8 @@
-import React from 'react';
-import {TextInput, View} from 'react-native';
-import Style from './style';
-import {Controller} from 'react-hook-form';
-import {AuthenticationValidators} from '@infostacks/validators';
+import React from 'react'
+import { TextInput, View } from 'react-native'
+import Style from './style'
+import { Controller } from 'react-hook-form'
+import { AuthenticationValidators } from '@infostacks/validators'
 
 const NumberField = ({
   control,
@@ -21,11 +21,9 @@ const NumberField = ({
             message: AuthenticationValidators.INCOMPLETE_FIELDS,
           },
         }}
-        render={({field: {onChange, onBlur, value}}) => (
+        render={({ field: { onChange, onBlur, value } }) => (
           <TextInput
-            className={
-              errors[fieldName] ? Style.inputViewError : Style.inputView
-            }
+            style={errors[fieldName] ? Style.inputViewError : Style.inputView}
             placeholder={placeholder}
             value={value}
             textContentType={textContentType}
@@ -36,7 +34,7 @@ const NumberField = ({
         name={fieldName}
       />
     </View>
-  );
-};
+  )
+}
 
-export default NumberField;
+export default NumberField
