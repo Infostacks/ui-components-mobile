@@ -1,6 +1,24 @@
-const Style = {
-  inputView: 'bg-[#E6ECFF]  px-2 text-lg rounded-lg text-[#47485A] pr-12',
-  inputViewError:
-    'bg-[#FCF4F4]  px-2 text-lg rounded-lg text-[#47485A] border-[1px] border-[#C62828]',
-};
-export default Style;
+import { StyleSheet } from 'react-native'
+
+const Style = StyleSheet.create({
+  inputView: {
+    backgroundColor: '#E6ECFF',
+    padding: 1 * 12,
+    fontSize: 1.125 * 16,
+    borderRadius: 1 * 8,
+    color: '#47485A',
+    paddingRight: 3 * 16,
+  },
+
+  inputViewError: {
+    backgroundColor: '#FCF4F4',
+    padding: 1 * 12,
+    fontSize: 1.125 * 16,
+    borderRadius: 1 * 8,
+    color: '#47485A',
+    borderWidth: 1,
+    borderColor: '#C62828',
+  },
+})
+
+export default Style
