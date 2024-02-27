@@ -2,7 +2,6 @@ import React from 'react'
 import { TextInput, View } from 'react-native'
 import Style from './style'
 import { Controller } from 'react-hook-form'
-import { AuthenticationValidators } from '@infostacks/validators'
 
 const NumberField = ({
   control,
@@ -10,6 +9,7 @@ const NumberField = ({
   fieldName,
   placeholder,
   textContentType,
+  message
 }: any) => {
   return (
     <View>
@@ -18,7 +18,7 @@ const NumberField = ({
         rules={{
           required: {
             value: true,
-            message: AuthenticationValidators.INCOMPLETE_FIELDS,
+            message: message,
           },
         }}
         render={({ field: { onChange, onBlur, value } }) => (
