@@ -19,13 +19,6 @@ jobs:
         with:
           node-version: 20
           registry-url: https://npm.pkg.github.com/
-          scope: '@infostacks'
-
-      # - name: Authenticate with private NPM package
-      - run: |
-          cd Components &&
-          echo "@infostacks:registry=https://npm.pkg.github.com" >> .npmrc
-          echo "//npm.pkg.github.com/:_authToken=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" >> .npmrc
       - run: cd Components/ && npm ci
       - run: cd Components/ && npm run rollup
       - run: cd Components/ && npm publish
