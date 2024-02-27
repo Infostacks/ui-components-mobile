@@ -19,7 +19,10 @@ jobs:
         with:
           node-version: 20
           registry-url: https://npm.pkg.github.com/
-      - run: cd Components/ && npm ci
+
+      - name: Authenticate with private NPM package
+        run: cd Components/ && echo "//registry.npmjs.org/:_authToken=${{ secrets.PUBLISH_TOKEN }}\n@infostacks:registry=https://npm.pkg.github.com" > ~/.npmrc && npm ci
+      # - run: cd Components/ && npm ci
       - run: cd Components/ && npm run rollup
       - run: cd Components/ && npm publish
         env:
